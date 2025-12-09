@@ -1,0 +1,122 @@
+@media (max-width: 768px){
+    .data-contrainer{
+        flex-direction: column-reverse;
+    }
+    .network-specifications{
+        margin-bottom: 60px;
+    }
+    .other-specifications{
+        margin-right: 0;
+    }
+    .ping::before{
+        display: none;
+    }
+    .upload-speed{
+        margin-right: 0;
+    }
+    .IP-adress{
+        margin-bottom: 20px;
+    }
+    .speedometer .retry-button{
+        bottom: 10%;
+    }
+}
+
+
+@media (max-width: 600px){
+    .header__title{
+        max-width: 170px;
+    }
+    .logo{
+        max-width: 35px;
+        max-height: 35px;
+    }
+    .title.header-text{
+        font-size: 22px;
+    }
+    .data-contrainer{
+        padding: 0px 20px 50px 20px;
+    }
+    .network-specifications{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .ping,
+    .download-speed,
+    .upload-speed{
+        margin: 20px 0px;
+    }
+    .download-speed::before{
+        top: -20%;
+        left: 25%;
+        transform: rotate(180deg);
+    }
+    .download-speed::after{
+        top: 120%;
+        right: 25%;
+        transform: rotate(180deg);
+    }
+    .ping::before{
+        display: block;
+        top: -20%;
+        left: -35%;
+        transform: rotate(180deg);
+    }
+    .upload-speed::after{
+        display: block;
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 0;
+        border: 1px solid #5C5F65;
+        bottom: -20%;
+        right: 20%;
+    }
+    .title.network-specifications-text{
+        font-size: 32px;
+    }
+    .description{
+        width: 100%;
+    }
+    .modal{
+        padding: 0px 10px;
+    }
+}
+
+
+@media (max-width: 430px){
+    .speedometer .retry-button{
+        bottom: 10%;
+    }
+    .modal__block{
+        padding: 10px;
+    }
+    .title.error{
+        font-size: 25px;
+    }
+    .subtitle.error{
+        font-size: 18px;
+    }
+    .update-button{
+        font-size: 18px;
+    }
+}
+
+@media (max-height: 600px){
+    .speedometer .retry-button{
+        bottom: 0;
+    }
+}
+
+@media (max-height: 400px){
+    .speedometer .retry-button{
+        bottom: -5%;
+    }
+}
+
+@media (max-height: 350px){
+    .speedometer .retry-button{
+        bottom: -10%;
+    }
+}

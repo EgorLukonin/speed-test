@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rest.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/adaptive.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/png">
+    <title>SPEED TEST</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__title">
+            <img src="{{ url_for('static', filename='img/speedometer.svg') }}" alt="speedometer.svg" class="logo">
+            <h1 class="title header-text">SPEED TEST</h1>
+        </div>
+    </header>
+    <main>
+        <div class="speedometer-container">
+            <div class="speedometer">
+                <div class="inner-ring"></div>
+                <div class="ticks">
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                    <span class="tick"></span>
+                </div>
+                <div class="details">
+                    <p class="label">UPLOAD</p>
+                    <p class="speed">0</p>
+                    <p class="unit">Mbps</p>
+                </div>
+                <div class="progress"></div>
+                <button class="retry-button">Start</button>
+            </div>
+        </div>
+        <div class="data">
+            <div class="data-contrainer">
+                <div class="other-specifications">
+                    <section class="IP-adress">
+                        <p class="subtitle specifications">IPv4-address</p>
+                        <h2 class="title other-specifications-text">46.138.47.201</h2>
+                    </section>
+                    <section class="time-zone">
+                        <p class="subtitle specifications">Time zone</p>
+                        <h2 class="title other-specifications-text">UTC +03:00</h2>
+                    </section>
+                </div>
+                <div class="network-specifications">
+                    <section class="ping" id="ping">
+                        <p class="subtitle specifications">Ping</p>
+                        <h2 class="title network-specifications-text">0</h2>
+                        <p class="subtitle specifications">ms</p>
+                    </section>
+                    <section class="download-speed" id="download">
+                        <p class="subtitle specifications">Download speed</p>
+                        <h2 class="title network-specifications-text">0</h2>
+                        <p class="subtitle specifications">Mbps</p>
+                    </section>
+                    <section class="upload-speed" id="upload">
+                        <p class="subtitle specifications">Upload speed</p>
+                        <h2 class="title network-specifications-text">0</h2>
+                        <p class="subtitle specifications">Mbps</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal">
+            <div class="modal__block">
+                <img src="{{ url_for('static', filename='img/error.svg') }}" alt="" class="img-error">
+                <section class="description">
+                    <h2 class="title error">Whoops, something went wrong</h2>
+                    <p class="subtitle error">Try refreshing the page</p>
+                    <button class="update-button">UPDATE</button>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='js/Speedometer.js') }}", type="module"></script>
+    <script src="{{ url_for('static', filename='js/Data.js') }}", type="module"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}" type="module"></script>
+</body>
+</html>

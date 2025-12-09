@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --color-white-grey: #878A8D;
+    --color-dark-grey: #2A2D32;
+    --color-white: #FFFFFF;
+    --color-green: #63D72A;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135.00deg, rgba(63, 66, 71, 1),rgba(42, 45, 50, 1) 100%);
+}
+
+
+.header{
+    width: 100%;
+    height: 100px;
+    padding-top: 20px;
+    padding-left: 5%;
+}
+
+
+.header__title{
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+}
+
+
+.title{
+    color: var(--color-white);
+    font-weight: 700;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+
+.title.header-text{
+    font-size: 24px;
+}
+
+
+
+/** Speedometer Styles **/
+.speedometer-container {
+    width: 100%;
+    height: 55vh;
+    position: relative;
+    margin: 0px auto;
+}
+
+/* .speedometer-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.12;
+} */
+
+.speedometer .inner-ring {
+    width: 18rem;
+    height: 18rem;
+    position: absolute;
+    top: calc(50% - 9rem);
+    left: calc(50% - 9rem);
+}
+
+.speedometer .inner-ring::before,
+.speedometer .inner-ring::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-top: 1px solid var(--color-white);
+    border-right: 1px solid var(--color-white);
+    border-radius: 50%;
+}
+
+.speedometer .inner-ring::before {
+    transform: rotate(-75deg);
+}
+
+.speedometer .inner-ring::after {
+    transform: rotate(-15deg);
+}
+
+
+.speedometer .tick {
+    position: absolute;
+    top: calc(50% - 0.1rem);
+    left: calc(50% - 0.4rem);
+}
+
+.speedometer .tick:nth-child(6n+1) {
+    width: 1.6rem;
+    left: calc(50% - 0.8rem);
+    border-color: #787a81;
+}
+
+.speedometer .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 21rem;
+    height: 21rem;
+    position: absolute;
+
+    top: calc(50% - 12.5rem);
+    left: calc(50% - 10.5rem);
+}
+
+.speedometer .label {
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-white-grey);
+}
+
+.speedometer .speed {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    margin: 12px 0px;
+}
+
+.speedometer .unit {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--color-white-grey);
+}
+
+.speedometer .progress {
+    width: 18rem;
+    height: 18rem;
+    position: absolute;
+    top: calc(50% - 9rem);
+    left: calc(50% - 9rem);
+    border-radius: 50%;
+}
+
+.speedometer .progress::before {
+    content: "";
+    position: absolute;
+    top: -0.2rem;
+    left: calc(50% - 0.3rem);
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: var(--color-green);
+    box-shadow: 0px 0px 8px 0px var(--color-green);
+}
+
+.speedometer .retry-button {
+    width: 10rem;
+    border: 2px solid var(--color-green);
+    appearance: none;
+    position: absolute;
+    left: calc(50% - 5rem);
+    bottom: 15%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 3rem;
+    color: var(--color-green);
+    border-radius: 3rem;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 250ms ease-out;
+}
+
+.speedometer .retry-button.inactive{
+    opacity: 0.33;
+    cursor: default;
+}
+
+.speedometer .retry-button:hover{
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+
+.speedometer .retry-button.inactive:hover{
+    background-color: transparent;
+    color: var(--color-green);
+}
+
+
+
+.data{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.data-contrainer{
+    display: flex;
+    padding: 40px;
+}
+
+.other-specifications{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.subtitle{
+    color: var(--color-white-grey);
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.subtitle.specifications{
+    font-size: 16px;
+}
+
+.title.other-specifications-text{
+    font-size: 20px;
+    margin-top: 5.17px;
+}
+
+
+.network-specifications{
+    display: flex;
+    padding-top: 20px;
+}
+
+.title.network-specifications-text{
+    font-size: 28px;
+    margin-top: 18px;
+    margin-bottom: 5px;
+}
+
+
+.other-specifications{
+    margin-right: 50px;
+}
+
+.ping,
+.download-speed,
+.upload-speed{
+    margin: 0px 40px;
+    position: relative;
+}
+
+
+.download-speed::before{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 0;
+    border: 1px solid #5C5F65;
+    top:50%;
+    left:-50%;
+    transform: rotate(90deg);
+}
+
+.download-speed::after{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 0;
+    border: 1px solid #5C5F65;
+    top:50%;
+    right:-50%;
+    transform: rotate(90deg);
+}
+
+
+.ping::before{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 0;
+    border: 1px solid #5C5F65;
+    top:50%;
+    left: -250%;
+    transform: rotate(90deg);
+}
+
+.upload-speed::after{
+    display: none;
+}
+
+
+.modal{
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.451);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s visibility .3s
+}
+
+.modal.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal.active .modal__block{
+    transform: scale(1);
+}
+
+.modal__block{
+    z-index: 1;
+    position: relative;
+    max-width: 700px;
+    height: 80vh;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    transform: scale(0);
+    transition: transform .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.img-error{
+    width: 70%;
+    margin-bottom: 5%;
+}
+
+.description{
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.title.error{
+    font-size: 30px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+
+.subtitle.error{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.update-button{
+    width: 40%;
+    border: 2px solid var(--color-green);
+    appearance: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 2rem;
+    color: var(--color-green);
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 250ms ease-out;
+}
+
+.update-button:hover{
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
