@@ -15,14 +15,28 @@ class Data{
         currentSection.textContent = value;
     }
 
-    updateOtherSpecifications(){
+    async updateOtherSpecifications(){
         const timeZone = this.otherSpecifications.querySelector('.time-zone').querySelector('.title');
+        const ipAdress = this.otherSpecifications.querySelector('.IP-adress').querySelector('.title');
         if (timeZone){
             const currentTimeZone = new Date().getTimezoneOffset();
             const value = Math.abs(parseInt(currentTimeZone / 60));
             const sign = currentTimeZone > 0 ? '-' : '+'
             timeZone.textContent = `UTC ${sign}0${value}:00`;
         }
+
+        // if (ipAdress){
+        //     try{
+        //         const response = await fetch('/api/ip');
+        //         const json = await response.json();
+        //         ipAdress.textContent = json.value;
+        //     }
+        //     catch(error){
+        //         throw new Error(error.message);
+        //     }
+        // }
+
+
     }
 
     
