@@ -3,7 +3,7 @@
 
 ![](./application-%20illustration.png)
 
-### Авторы: 
+## Авторы: 
 * Луконин Егор Дмитриевич
 * Михайлов Валерий Алексеевич
 
@@ -25,7 +25,7 @@ git clone https://github.com/EgorLukonin/speed-test.git
 ```
 2. Переход в директорию speed-test <br>
 ``` bash
- cd speed test 
+ cd speed-test 
 ```
 3. Установка зависимостей <br>
 ``` bash
