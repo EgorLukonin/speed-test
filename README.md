@@ -29,7 +29,7 @@ git clone https://github.com/EgorLukonin/speed-test.git
 ```
 3. Установка зависимостей <br>
 ``` bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 4. Запуск сервера
 ``` bash
